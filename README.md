@@ -8,18 +8,11 @@
 
 ```javascript
 let current = {
-  a: {
-    b: [],
-    c: true,
-  },
+  a: { b: [], c: true },
   d: [],
   e: {
-    f: {
-      g: 'hello',
-    },
-    h: {
-      i: 0,
-    },
+    f: { g: 'hello' },
+    h: { i: 0 },
   },
 };
 
@@ -54,10 +47,7 @@ let next = {
   ...current,
   e: {
     ...current.e,
-    h: {
-      ...current.h,
-      i: 1,
-    },
+    h: { ...current.h, i: 1 },
   },
 };
 ```
