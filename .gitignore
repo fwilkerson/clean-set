@@ -60,5 +60,8 @@ typings/
 # next.js build output
 .next
 
-# editor files
+# Editor files
 .vscode
+
+# Testing area for myself
+sandbox

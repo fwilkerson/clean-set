@@ -6,6 +6,16 @@
 
 > Quickly update a value in a deeply nested object and clone each node touched for simple change tracking `===`.
 
+Check out [dset](https://github.com/lukeed/dset) if you just want to do an in place mutation on a deeply nested value.
+
+## Install
+
+> npm i clean-set
+
+Includes builds for commonjs, umd, and esm and is less than 200b gzip
+
+## Usage
+
 ```javascript
 let current = {
   a: { b: [], c: true },
@@ -55,6 +65,8 @@ let next = {
 ## Benchmarks
 
 Check out the [es bench link](https://esbench.com/bench/5b16f1cbf2949800a0f61cf2) to run the benchmarks yourself.
+
+> Note: YMMV canary and firefox dev have some impressive improvements for object assign and object spread respectively.
 
 Chrome 67
 
