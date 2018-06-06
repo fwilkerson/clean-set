@@ -8,19 +8,19 @@
 
 ```javascript
 let current = {
-	a: {
-		b: [],
-		c: true,
-	},
-	d: [],
-	e: {
-		f: {
-			g: 'hello',
-		},
-		h: {
-			i: 0,
-		},
-	},
+  a: {
+    b: [],
+    c: true,
+  },
+  d: [],
+  e: {
+    f: {
+      g: 'hello',
+    },
+    h: {
+      i: 0,
+    },
+  },
 };
 
 let next = cleanSet(current, 'e.h.i', 1);
@@ -51,14 +51,14 @@ Here's what an object spread equivalent would look like.
 
 ```javascript
 let next = {
-	...current,
-	e: {
-		...current.e,
-		h: {
-			...current.h,
-			i: 1,
-		},
-	},
+  ...current,
+  e: {
+    ...current.e,
+    h: {
+      ...current.h,
+      i: 1,
+    },
+  },
 };
 ```
 
