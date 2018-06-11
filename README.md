@@ -12,7 +12,7 @@ Check out [dset](https://github.com/lukeed/dset) if you just want to do an in pl
 
 > npm i clean-set
 
-Includes builds for commonjs, umd, and esm and is less than ~~200b~~ 176b gzip (thanks to @lukeed)
+Includes builds for commonjs, umd, and esm and is less than ~~200b~~ 176b gzip (thanks to [@lukeed](https://github.com/lukeed))
 
 ## Usage
 
