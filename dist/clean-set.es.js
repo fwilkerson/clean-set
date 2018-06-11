@@ -1,2 +1,2 @@
-function t(t,n){for(var r in void 0===n&&(n={}),t)n[r]=t[r];return n}export default function(n,r,o){r.split&&(r=r.split("."));for(var f,i=t(n),e=i,u=0,l=r.length;u<l;u++)f=e[r[u]],e=e[r[u]]=u===l-1?"function"==typeof o?o(f):o:t(f);return i};
+function r(r,t){for(var n in t=t||{},r)t[n]=r[n];return t}export default function(t,n,l){n.split&&(n=n.split("."));for(var e=r(t),f=e,i=0,o=n.length;i<o;i++)f=f[n[i]]=i===o-1?l.call?l(f[n[i]]):l:r(f[n[i]]);return e};
 //# sourceMappingURL=clean-set.es.js.map
