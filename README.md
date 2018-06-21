@@ -57,7 +57,7 @@ let next = {
   ...current,
   e: {
     ...current.e,
-    h: { ...current.h, i: 1 },
+    h: { ...current.e.h, i: 1 },
   },
 };
 ```
