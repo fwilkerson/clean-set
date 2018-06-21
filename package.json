@@ -1,6 +1,6 @@
 {
   "name": "clean-set",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A fast deep assignment alternative to the object spread operator and Object.assign",
   "umd:main": "dist/clean-set.min.js",
   "module": "dist/clean-set.es.js",
