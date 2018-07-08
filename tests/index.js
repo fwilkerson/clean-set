@@ -168,3 +168,16 @@ test('clean-set: creates a record at the index if none exists', tap => {
 
   tap.end();
 });
+
+test('clean-set: performance benchmark', tap => {
+  let cData = data,
+    n = 0,
+    start = +Date.now();
+  for (; n < 100000; n++) {
+    cData = cleanSet(cData, 'e.h.i', i => i + 1);
+  }
+  let timeTaken = +Date.now() - start;
+
+  tap.assert(timeTaken < 300, `Benchmark ran in ${timeTaken}ms`);
+  tap.end();
+});
