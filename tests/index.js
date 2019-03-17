@@ -178,6 +178,43 @@ test('clean-set: performance benchmark', tap => {
   }
   let timeTaken = +Date.now() - start;
 
-  tap.assert(timeTaken < 300, `Benchmark ran in ${timeTaken}ms`);
+  tap.assert(timeTaken < 300, `cleanSet benchmark ran in ${timeTaken}ms`);
+  tap.end();
+});
+
+test('Object.assign: performance benchmark', tap => {
+  let cData = data,
+    n = 0,
+    start = +Date.now();
+
+  for (; n < 100000; n++) {
+    cData = Object.assign({}, cData, {
+      e: Object.assign({}, cData.e, {
+        h: Object.assign({}, cData.e.h, { i: cData.e.h.i + 1 }),
+      }),
+    });
+  }
+  let timeTaken = +Date.now() - start;
+
+  tap.assert(timeTaken < 300, `Object.assign benchmark ran in ${timeTaken}ms`);
+
+  tap.end();
+});
+
+test('Object spread: performance benchmark', tap => {
+  let cData = data,
+    n = 0,
+    start = +Date.now();
+
+  for (; n < 100000; n++) {
+    cData = {
+      ...cData,
+      e: { ...cData.e, h: { ...cData.e.h, i: cData.e.h.i + 1 } },
+    };
+  }
+  let timeTaken = +Date.now() - start;
+
+  tap.assert(timeTaken < 300, `Object spread benchmark ran in ${timeTaken}ms`);
+
   tap.end();
 });
