@@ -1,2 +1,2 @@
-function r(r){var n=r&&r.pop?[]:{};for(var t in r)n[t]=r[t];return n}module.exports=function(n,t,o){t.split&&(t=t.split("."));for(var l=r(n),e=l,i=0,p=t.length;i<p;i++)e=e[t[i]]=i===p-1?o.call?o(e[t[i]]):o:r(e[t[i]]);return l};
+var t=function(t,e){return!t||t.pop||"object"!=typeof t?e:Object.assign({},t,e)};module.exports=function(e,n,s){n.split&&(n=n.split("."));for(var o=Object.assign({},e),r=o,c=0,i=n.length;c<i;c++)r=r[n[c]]=c==i-1?t(r[n[c]],s.call?s(r[n[c]]):s):Object.assign({},r[n[c]]);return o};
 //# sourceMappingURL=clean-set.js.map
