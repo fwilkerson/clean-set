@@ -169,6 +169,18 @@ test('clean-set: creates a record at the index if none exists', tap => {
   tap.end();
 });
 
+test('clean-set: allows setting to null', tap => {
+  let next = cleanSet(data, 'q.r', null);
+
+  tap.assert(next != null, 'next has a value');
+  tap.assert(next !== data, 'next has a new reference');
+
+  tap.same(next.q, { r: null } , 'object was created and value set to null');
+
+  tap.end();
+});
+
+
 test('clean-set: performance benchmark', tap => {
   let cData = data,
     n = 0,
