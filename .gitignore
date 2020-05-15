@@ -65,3 +65,5 @@ typings/
 
 # Testing area for myself
 sandbox
+
+coverage.lcov
